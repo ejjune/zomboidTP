@@ -10,7 +10,7 @@ function AddItems(props) {
 
   const addItem = (user, item) => {
     axios
-      .get("http://localhost:8080/rcon/item/" + user + "/" + item)
+      .get("http://crabpro.net:8080/rcon/item/" + user + "/" + item)
       .then((response) => {
         console.log(response);
         setPosts(response.data);

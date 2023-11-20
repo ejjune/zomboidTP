@@ -11,7 +11,7 @@ function AllItems(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/rcon/item")
+      .get("http://crabpro.net:8080/rcon/item")
       .then((response) => {
         console.log(response);
         setPosts(response.data);

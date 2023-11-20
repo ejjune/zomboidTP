@@ -14,7 +14,7 @@ function AllPlayers(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/rcon/players")
+      .get("http://crabpro.net:8080/rcon/players")
       .then((response) => {
         console.log(response);
         setPosts(response.data);
@@ -31,12 +31,11 @@ function AllPlayers(props) {
         isDisabled={false}
         setButton={setSelectedPlayer}
       />
-      <SelectButton
+      {/* <SelectButton
         list={posts.offlinePlayers}
         isDisabled={true}
         setButton={setSelectedPlayer}
-      />
-      <Text>Selected Player: {selectedPlayer}</Text>
+      /> */}
     </View>
   );
 }
